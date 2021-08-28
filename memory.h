@@ -11,7 +11,7 @@
 #define ADJUST_ARRAY(type, array, size) ((type *)reallocate(array, size))
 
 // allocating size 0 will free the array
-#define FREE_ARRAY(array, size) (reallocate(array, 0))
+#define FREE_ARRAY(array) (reallocate(array, 0))
 
 void *reallocate(void *pointer, size_t size);
 
