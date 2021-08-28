@@ -5,6 +5,7 @@
 
 int testInsertArray(Array *a, Value value)
 {
+
     insertArray(a, value);
 
     if (a->capacity == 0 && a->count == 0 && a->array == NULL)
@@ -15,22 +16,36 @@ int testInsertArray(Array *a, Value value)
     return 1;
 };
 
-int testArrayInit(Array *a)
+int verifyEmptyArray(Array *a)
 {
-    initArray(a);
 
     if (a->capacity == 0 && a->count == 0 && a->array == NULL)
     {
         return 0;
     }
-    printf("testArrayInit failed");
     return 1;
+}
+
+int testArrayInit(Array *a)
+{
+    initArray(a);
+    int result = verifyEmptyArray(a);
+    if (result > 0)
+    {
+        printf("testArrayInit failed");
+    }
+    return result;
 };
 
 int testFreeArray(Array *a)
 {
     freeArray(a);
-    testArrayInit(a);
+    int result = verifyEmptyArray(a);
+    if (result > 0)
+    {
+        printf("testFreeArray failed");
+    }
+    return result;
 }
 
 void testArrayImpl()
