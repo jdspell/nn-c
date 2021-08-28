@@ -7,10 +7,8 @@ void testArrayImpl();
 // test for array initialization
 int testArrayInit(Array *a);
 // test for growing the array
-void testAdjustArraySmaller();
-// test for shrinking the array
-void testAdjustArrayBigger();
+int testInsertArray(Array *a, Value value);
 // test for freeing the array
-void testFreeArray();
+int testFreeArray(Array *a);
 
 #endif
