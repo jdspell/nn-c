@@ -3,7 +3,7 @@
 #include "array.h"
 #include "memory.h"
 
-initArray(Array *a)
+void initArray(Array *a)
 {
     a->count = 0;
     a->capacity = 0;

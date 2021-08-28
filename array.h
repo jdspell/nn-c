@@ -12,7 +12,6 @@ typedef struct
 
 void initArray(Array *array);
 void insertArray(Array *array, Value value);
-void removeArray(Array *array);
 void freeArray(Array *array);
 
 #endif
