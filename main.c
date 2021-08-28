@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+#include "array.h"
 #include "array.test.h"
 
 void testsCheck()

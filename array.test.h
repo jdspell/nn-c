@@ -5,7 +5,7 @@
 void testArrayImpl();
 
 // test for array initialization
-void testArrayInit();
+int testArrayInit(Array *a);
 // test for growing the array
 void testAdjustArraySmaller();
 // test for shrinking the array
