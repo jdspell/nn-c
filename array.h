@@ -1,6 +1,8 @@
 #ifndef nnc_array_h
 #define nnc_array_h
 
+#define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
+
 typedef double Value;
 
 typedef struct
@@ -12,7 +14,6 @@ typedef struct
 
 void initArray(Array *array);
 void insertArray(Array *array, Value value);
-void removeArray(Array *array);
 void freeArray(Array *array);
 
 #endif

@@ -1,10 +1,23 @@
 #include <stdio.h>
-#include "common.h"
+
+#include "array.h"
+#include "array.test.h"
+
+void testsCheck()
+{
+
+    char runTests;
+    printf("Run implementation tests(y/n): ");
+    scanf("%c", &runTests);
+
+    if (runTests == 'y')
+    {
+        testArrayImpl();
+    }
+}
 
 int main(void)
 {
-    int i = 3;
-    printf("The int is: %d\n", i);
-    int j = GROW_ARRAY(i);
-    printf("The int is: %d\n", j);
+    testsCheck();
+    return 0;
 }
