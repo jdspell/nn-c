@@ -1,7 +1,7 @@
 #ifndef nnc_array_h
 #define nnc_array_h
 
-#define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
+#define ARRAY_SIZE(array) (int)(sizeof(array) / sizeof(array[0]))
 
 typedef double Value;
 

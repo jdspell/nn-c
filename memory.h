@@ -8,7 +8,8 @@
 #define GROW_CAPACITY(size) (size < 8 ? 8 : size * 2)
 
 // adjust the array size by passing in the desired capacity
-#define ADJUST_ARRAY(type, array, size) (reallocate(array, size))
+#define ADJUST_ARRAY(type, array, size) \
+    ((type *)reallocate(array, sizeof(type) * size))
 
 // allocating size 0 will free the array
 #define FREE_ARRAY(array) (reallocate(array, 0))
