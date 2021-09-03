@@ -16,7 +16,7 @@ void insertArray(Array *a, Value value)
     {
         // grow the array
         a->capacity = GROW_CAPACITY(a->capacity);
-        a->array = ADJUST_ARRAY(Array, a->array, a->capacity);
+        a->array = ADJUST_ARRAY(Value, a->array, a->capacity);
     }
     a->array[a->count] = value;
     a->count++;
