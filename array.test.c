@@ -50,11 +50,12 @@ int testInsertArray(Array *a)
     return 1;
 };
 
-// int testFreeArray(Array *a)
-// {
-//     freeArray(a);
-//     return verifyEmptyArray(a, "testFreeArray");
-// }
+int testFreeArray(Array *a)
+{
+    printf("%i %i %i", a->count, a->capacity, (int)a->array[a->count - 1]);
+    // freeArray(a);
+    return verifyEmptyArray(a, "testFreeArray");
+}
 
 void testArrayImpl()
 {
@@ -66,7 +67,7 @@ void testArrayImpl()
     failedTests += testArrayInit(&a);
     failedTests += testInsertArray(&a);
     // note to call testFreeArray last to free memory on the last test
-    // failedTests += testFreeArray(&a);
+    failedTests += testFreeArray(&a);
 
     printf("Total number of failed tests: %d.\n", failedTests);
     printf("End array implementation tests.\n\n");
