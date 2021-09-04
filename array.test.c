@@ -52,8 +52,7 @@ int testInsertArray(Array *a)
 
 int testFreeArray(Array *a)
 {
-    printf("%i %i %i", a->count, a->capacity, (int)a->array[a->count - 1]);
-    // freeArray(a);
+    freeArray(a);
     return verifyEmptyArray(a, "testFreeArray");
 }
 

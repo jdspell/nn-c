@@ -8,6 +8,7 @@ void *reallocate(void *pointer, size_t newSize)
     if (newSize == 0)
     {
         free(pointer);
+        return NULL;
     }
     // else reallocate the pointer to the new size
     void *result = realloc(pointer, newSize);
